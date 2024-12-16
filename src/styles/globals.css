@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;400;500;600;700;800;900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --foreground: #114045;
+    --background: #a6f6ff;
+    --background-start: #d9fbff;
+    --background-end: #114045;
+    --foreground-dark: #d9fbff;
+    --background-dark: #114045;
+    --menu-background: #066c78;
+    --yin: #000;
+    --yang: #fff;
+}
+
+body {
+    color: var(--foreground);
+    background: linear-gradient(
+        to bottom,
+        transparent,
+        var(--background-end-rgb) var(--background-start)
+    );
+    padding: 0;
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+@layer utilities {
+    .text-balance {
+        text-wrap: balance;
+    }
+}
+
+@layer base {
+    h1 {
+        @apply text-2xl;
+    }
+    h2 {
+        @apply text-xl;
+    }
+    /* ... */
+}
